@@ -6,8 +6,6 @@ WORKDIR /app
 
 # Copy dependency files first (for caching)
 COPY package.json ./
-# Only copy yarn.lock if it exists (optional, safe for first-time builds)
-COPY yarn.lock* ./
 
 # Install dependencies
 RUN yarn install
